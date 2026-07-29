@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="amoled_black">#000000</color>
+    <color name="amoled_bg">#06060C</color>
+    <color name="glass_card_bg">#141220</color>
+    <color name="glass_card_active">#1D1933</color>
+    <color name="glass_input_bg">#12101C</color>
+
+    <color name="cyan_accent">#00E5FF</color>
+    <color name="purple_accent">#7C3AED</color>
+    <color name="magenta_accent">#EC4899</color>
+    <color name="emerald_active">#10B981</color>
+
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#9CA3AF</color>
+    <color name="text_muted">#6B7280</color>
+
+    <color name="border_glass">#26FFFFFF</color>
+    <color name="border_glass_active">#8000E5FF</color>
+
+    <color name="call_danger">#FF4B4B</color>
+    
+    <color name="purple_200">#00E5FF</color>
+    <color name="purple_500">#7C3AED</color>
+    <color name="purple_700">#141220</color>
+    <color name="teal_200">#00E5FF</color>
+    <color name="teal_700">#10B981</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+</resources>

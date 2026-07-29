@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="start"
+    android:orientation="vertical"
+    android:paddingVertical="4dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="280dp"
+        android:background="@drawable/bg_chat_bubble_received"
+        android:orientation="vertical"
+        android:paddingHorizontal="14dp"
+        android:paddingVertical="10dp">
+
+        <TextView
+            android:id="@+id/txtMsgRecSender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Alex"
+            android:textColor="@color/cyan_accent"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/txtMsgRecText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="The UI looks amazing with AMOLED dark mode and glass card effects!"
+            android:textColor="@color/text_primary"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/txtMsgRecTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="4dp"
+            android:text="10:44 AM"
+            android:textColor="@color/text_muted"
+            android:textSize="10sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

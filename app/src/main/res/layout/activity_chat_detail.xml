@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:background="@drawable/bg_amoled">
+
+    <!-- Header Bar -->
+    <LinearLayout
+        android:id="@+id/chatHeader"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="#12101C"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="12dp">
+
+        <ImageView
+            android:id="@+id/btnChatBack"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:background="@drawable/bg_circle_action"
+            android:padding="8dp"
+            android:src="@drawable/ic_back"
+            android:contentDescription="Back" />
+
+        <RelativeLayout
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/bg_circle_avatar_ring">
+
+            <TextView
+                android:id="@+id/txtChatAvatar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#1F1C2E"
+                android:gravity="center"
+                android:text="A"
+                android:textColor="@color/cyan_accent"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtChatName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Alex Rivera"
+                android:textColor="@color/text_primary"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtChatSubStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Active now • Typing..."
+                android:textColor="@color/cyan_accent"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/btnChatVoiceCall"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:background="@drawable/bg_circle_action"
+            android:padding="8dp"
+            android:src="@drawable/ic_phone"
+            android:contentDescription="Voice Call" />
+
+        <ImageView
+            android:id="@+id/btnChatVideoCall"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/bg_circle_action"
+            android:padding="8dp"
+            android:src="@drawable/ic_video"
+            android:contentDescription="Video Call" />
+
+    </LinearLayout>
+
+    <!-- Messages RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvMessages"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/inputBarLayout"
+        android:layout_below="@id/chatHeader"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="12dp"
+        android:clipToPadding="false" />
+
+    <!-- Bottom Glass Input Bar -->
+    <LinearLayout
+        android:id="@+id/inputBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#12101C"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="10dp">
+
+        <ImageView
+            android:id="@+id/btnAttach"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:background="@drawable/bg_circle_action"
+            android:padding="8dp"
+            android:src="@drawable/ic_attachment"
+            android:contentDescription="Attachment" />
+
+        <EditText
+            android:id="@+id/etMessageInput"
+            android:layout_width="0dp"
+            android:layout_height="46dp"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="8dp"
+            android:background="@drawable/bg_glass_input"
+            android:hint="Type encrypted message..."
+            android:inputType="textCapSentences|textMultiLine"
+            android:paddingHorizontal="14dp"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_muted"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/btnSend"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:background="@drawable/bg_btn_primary_gradient"
+            android:padding="10dp"
+            android:src="@drawable/ic_send"
+            android:contentDescription="Send" />
+
+    </LinearLayout>
+
+</RelativeLayout>

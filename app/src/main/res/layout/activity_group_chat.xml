@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:background="@drawable/bg_amoled">
+
+    <!-- Group Header Bar -->
+    <LinearLayout
+        android:id="@+id/groupHeader"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="#12101C"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="12dp">
+
+        <ImageView
+            android:id="@+id/btnGroupBack"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:background="@drawable/bg_circle_action"
+            android:padding="8dp"
+            android:src="@drawable/ic_back"
+            android:contentDescription="Back" />
+
+        <RelativeLayout
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/bg_circle_avatar_ring">
+
+            <TextView
+                android:id="@+id/txtGroupAvatar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#2E1C38"
+                android:gravity="center"
+                android:text="N"
+                android:textColor="@color/magenta_accent"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtGroupName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nova Elite Squad"
+                android:textColor="@color/text_primary"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtGroupMembers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12 Members • 4 Online"
+                android:textColor="@color/text_secondary"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/btnGroupCall"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:background="@drawable/bg_circle_action"
+            android:padding="8dp"
+            android:src="@drawable/ic_group"
+            android:contentDescription="Group Call" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvGroupMessages"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/groupInputBar"
+        android:layout_below="@id/groupHeader"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="12dp"
+        android:clipToPadding="false" />
+
+    <LinearLayout
+        android:id="@+id/groupInputBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#12101C"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="10dp">
+
+        <ImageView
+            android:id="@+id/btnGroupAttach"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:background="@drawable/bg_circle_action"
+            android:padding="8dp"
+            android:src="@drawable/ic_attachment"
+            android:contentDescription="Attachment" />
+
+        <EditText
+            android:id="@+id/etGroupInput"
+            android:layout_width="0dp"
+            android:layout_height="46dp"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="8dp"
+            android:background="@drawable/bg_glass_input"
+            android:hint="Broadcast to Nova Squad..."
+            android:inputType="textCapSentences"
+            android:paddingHorizontal="14dp"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_muted"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/btnGroupSend"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:background="@drawable/bg_btn_primary_gradient"
+            android:padding="10dp"
+            android:src="@drawable/ic_send"
+            android:contentDescription="Send" />
+
+    </LinearLayout>
+
+</RelativeLayout>
